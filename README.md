@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # untitled
 
 A new Flutter project.
@@ -16,3 +17,6 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 =======
 # Avventura-Flutter_Travel_App
+=======
+# Avventura-Flutter_Travel_App
+>>>>>>> 394fbcef40cda61b6de47e525220c301238e44c1

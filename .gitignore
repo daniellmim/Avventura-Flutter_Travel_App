@@ -24,9 +24,13 @@ doc/api/
 *.js.map
 
 .flutter-plugins
+<<<<<<< HEAD
 
 .flutter-plugins-dependencies
 
 # ignoring image files
 
 lib/images/
+=======
+.flutter-plugins-dependencies
+>>>>>>> 394fbcef40cda61b6de47e525220c301238e44c1
