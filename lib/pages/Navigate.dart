@@ -58,15 +58,19 @@ class _navigateState extends State<navigate> {
 ///////////////////////////////////////////////////////////////////////////////////
 
 
-        drawer: Drawer(child: ListView(
+        drawer: Drawer(
+            child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const UserAccountsDrawerHeader(
-              accountName: Text('John Doe'),
-              accountEmail: Text('johndoe@example.com'),
-              currentAccountPicture: CircleAvatar(
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.grey[850], // Set the desired color
+              ),
+              accountName: Text('Josh x01'),
+              accountEmail: Text('joshX01@gmail.com'),
+              currentAccountPicture: const CircleAvatar(
                 backgroundImage: NetworkImage(
-                  'https://example.com/profile.jpg',
+                  'https://avatars.githubusercontent.com/u/87242555?v=4',
                 ),
               ),
             ),
@@ -137,7 +141,7 @@ class _navigateState extends State<navigate> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
-            BottomNavigationBarItem(icon: Icon(Icons.location_city), label: 'Map'),
+            BottomNavigationBarItem(icon: Icon(Icons.location_on), label: 'Map'),
             BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Plans'),
 
           ],

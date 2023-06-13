@@ -18,12 +18,15 @@ class SignInPageState extends State<SignInPage> {
   final passwordController = TextEditingController();
 
   void signUserIn(){
-
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => navigate()),
+    );
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[400],
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
           child: Stack(
@@ -60,13 +63,13 @@ class SignInPageState extends State<SignInPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
                   controller: usernameController,
-                  decoration: InputDecoration(
+                  decoration:const InputDecoration(
                     hintText: 'user name',
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey.shade400)
+                        borderSide: BorderSide(color: Colors.white)
                     ),
                     fillColor: Colors.transparent,
                     filled: true,
@@ -117,29 +120,7 @@ class SignInPageState extends State<SignInPage> {
 
                 // sign in button........................................
 
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => navigate()),
-
-
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.all(20),
-                  margin: EdgeInsets.symmetric(horizontal: 25.0),
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(25)
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Sign in',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
-                    ),),
-                ),
-              ),
+                MyButton(onTap: signUserIn, buttonName: 'Sign in'),
 
                 const SizedBox(height: 50),
 
@@ -157,7 +138,7 @@ class SignInPageState extends State<SignInPage> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
-                          'Or continue with',
+                          'or continue with',
                           style: TextStyle(color: Colors.grey[700]),
                         ),
                       ),
@@ -179,19 +160,15 @@ class SignInPageState extends State<SignInPage> {
                   children: [
                     // google button
                     SquareTile(imagePath: 'lib/images/google.png'),
-                    SizedBox(width: 10),
+                    SizedBox(width: 20),
                     //apple logo
                     SquareTile(imagePath: 'lib/images/ios.png'),
-
-
-                    SizedBox(width: 25),
-
                     // apple button
                     //SquareTile(imagePath: 'lib/images/ios.png')
                   ],
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 25),
 
                 // not a member? register now
                 Row(

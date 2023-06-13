@@ -15,7 +15,7 @@ class _signupState extends State<signup> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  void signUserIn(){
+  void signUserup(){
 
   }
 
@@ -28,7 +28,7 @@ class _signupState extends State<signup> {
           child: Stack(
             children:[
               Image.asset(
-                'lib/images/background _gif.gif',
+                'lib/images/background_image.jpg',
                 height: double.infinity,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -58,7 +58,7 @@ class _signupState extends State<signup> {
                       controller: usernameController,
                       decoration: InputDecoration(
                         hintText: 'First Name',
-                          hintStyle: TextStyle(color: Colors.white),
+                          hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(20)
@@ -79,7 +79,7 @@ class _signupState extends State<signup> {
                       controller: usernameController,
                       decoration: InputDecoration(
                         hintText: 'Last Name',
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.black ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                             borderRadius: BorderRadius.circular(20)
@@ -100,7 +100,7 @@ class _signupState extends State<signup> {
                       controller: usernameController,
                       decoration: InputDecoration(
                         hintText: 'Email',
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                             borderRadius: BorderRadius.circular(20)
@@ -122,7 +122,7 @@ class _signupState extends State<signup> {
                       obscureText: true,
                       decoration: InputDecoration(
                         hintText: 'Password',
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.black ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                             borderRadius: BorderRadius.circular(20)
@@ -141,7 +141,8 @@ class _signupState extends State<signup> {
 
                   // sign in button........................................
                   MyButton(
-                    onTap: signUserIn,
+                    buttonName: 'Submit',
+                    onTap: signUserup,
                   ),
 
                   const SizedBox(height: 50),
@@ -189,7 +190,7 @@ class _signupState extends State<signup> {
                     ],
                   ),
 
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 40),
 
                   // already have an acount....................
                   GestureDetector(

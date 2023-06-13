@@ -15,9 +15,7 @@ class _PlansPageState extends State<PlansPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Plans'),
-      ),
+
       body: ListView.builder(
         itemCount: _plans.length,
         itemBuilder: (context, index) {
